@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Gestão de estoque</h1>
+    </header>
+    <form id="product-form">
+      <div>
+        <label for="product-name-input">Nome do produto:</label>
+        <input type="text" id="product-name-input" />
+      </div>
+      <div>
+        <label for="product-type-input">Tipo do produto:</label>
+        <select name="" id="product-type-input">
+          <option value="food">Alimento</option>
+          <option value="drink">Bebida</option>
+          <option value="cleaning">Limpeza</option>
+          <option value="others">Outros</option>
+        </select>
+      </div>
+      <div>
+        <label for="product-quantity-input">Quantidade:</label>
+        <input type="number" id="product-quantity-input" />
+      </div>
+      <div>
+        <label for="unit-price-input">Valor unid.:</label>
+        <input type="number" id="unit-price-input" />
+      </div>
+      <button type="submit" class="btn-primary">Adicionar +</button>
+    </form>
+
+    <section id="products-section">
+      <h2 class="products-section-title">Lista de produtos</h2>
+      <table id="products-section-table" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Quantidade</th>
+            <th>Valor unid.</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="products-section-table-body">
+          <tr class="product">
+            <td class="product-id">#1</td>
+            <td class="product-name">Tang</td>
+            <td class="product-type">Bebida</td>
+            <td class="product-quantity">4</td>
+            <td class="product-unit-price">R$ 3,00</td>
+            <td><button id="remove-btn">Remover</button></td>
+          </tr>
+
+          <tr class="product">
+            <td class="product-id">#2</td>
+            <td class="product-name">Doritos</td>
+            <td class="product-type">Comida</td>
+            <td class="product-quantity">10</td>
+            <td class="product-unit-price">R$ 10,00</td>
+            <td><button id="remove-btn">Remover</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

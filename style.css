@@ -33,7 +33,7 @@ header {
 input,
 select,
 .btn-primary,
-#remove-btn {
+.remove-btn {
   padding: 5px;
   background-color: transparent;
   border-radius: 4px;
@@ -47,7 +47,7 @@ select {
 }
 
 .btn-primary,
-#remove-btn {
+.remove-btn {
   background-color: #00b894;
   cursor: pointer;
   transition: 0.5s;
@@ -73,12 +73,31 @@ td {
   padding: 10px;
 }
 
-#remove-btn {
+.remove-btn,
+#product-remove-filter-btn {
   background-color: #f84e4e;
   border-color: #f84e4e;
 }
 
-#remove-btn:hover {
+.remove-btn:hover,
+#product-remove-filter-btn:hover {
   background-color: transparent;
   color: #f84e4e;
+}
+
+#product-remove-filter-btn {
+  display: none;
+}
+
+.product {
+  animation: show 0.5s ease-in-out forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Gestão de estoque</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,10 +24,10 @@
       <div>
         <label for="product-type-input">Tipo do produto:</label>
         <select name="" id="product-type-input">
-          <option value="food">Alimento</option>
-          <option value="drink">Bebida</option>
-          <option value="cleaning">Limpeza</option>
-          <option value="others">Outros</option>
+          <option value="Alimento">Alimento</option>
+          <option value="Bebida">Bebida</option>
+          <option value="Limpeza">Limpeza</option>
+          <option value="Outros">Outros</option>
         </select>
       </div>
       <div>
@@ -43,6 +43,19 @@
 
     <section id="products-section">
       <h2 class="products-section-title">Lista de produtos</h2>
+      <div class="products-section-filter-area">
+        <select name="" id="product-filter-input">
+          <option selected disabled>Filtrar por</option>
+          <option value="Alimento">Alimento</option>
+          <option value="Bebida">Bebida</option>
+          <option value="Limpeza">Limpeza</option>
+          <option value="Outros">Outros</option>
+        </select>
+        <button id="product-filter-btn" class="btn-primary">Filtrar</button>
+        <button id="product-remove-filter-btn" class="btn-primary">
+          Remover filtro
+        </button>
+      </div>
       <table id="products-section-table" cellspacing="0">
         <thead>
           <tr>
@@ -54,25 +67,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody class="products-section-table-body">
-          <tr class="product">
-            <td class="product-id">#1</td>
-            <td class="product-name">Tang</td>
-            <td class="product-type">Bebida</td>
-            <td class="product-quantity">4</td>
-            <td class="product-unit-price">R$ 3,00</td>
-            <td><button id="remove-btn">Remover</button></td>
-          </tr>
-
-          <tr class="product">
-            <td class="product-id">#2</td>
-            <td class="product-name">Doritos</td>
-            <td class="product-type">Comida</td>
-            <td class="product-quantity">10</td>
-            <td class="product-unit-price">R$ 10,00</td>
-            <td><button id="remove-btn">Remover</button></td>
-          </tr>
-        </tbody>
+        <tbody id="products-section-table-body"></tbody>
       </table>
     </section>
 
